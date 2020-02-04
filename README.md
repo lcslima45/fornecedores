@@ -31,4 +31,4 @@ E o construtor construirá um arquivo html cujo nome é tabela_fornecedores.html
 
 Se desejar testar o codigo-fonte com qualquer outro arquivo exibido na mesma forma de entrada do arquivo CSV fornecido aqui, basta entrar no codigo fornecedores.py e mudar o endereço do arquivo com o nome da locação do seu novo arquivo, assim como está na área circulada do print abaixo.
 
-![alt text](![alt text](https://github.com/lcslima45/fornecedores/blob/master/Screenshot%20from%202020-02-03%2021-32-27.jpg))
+![alt text](https://github.com/lcslima45/fornecedores/blob/master/Screenshot%20from%202020-02-03%2022-15-53.png)
