@@ -9,15 +9,12 @@ Created on Mon Feb  3 20:01:39 2020
 
 import csv
 def fornecedores_pag():
-    
-    
     dicionario = {}
     fornecedores_pagamento_maximo={}
-    
+    ##Abrindo arquivo
     with open('pagamentos_sample.csv', 'r') as ficheiro:
         arquivo = csv.reader(ficheiro)
-        
-        flag = 0
+        #criando chave do mês para o dicionário
         for linha in arquivo:
             data_aux = linha[2].split('-').copy()
             chave_mes= ''
@@ -32,16 +29,20 @@ def fornecedores_pag():
                 count = count +1
                         
             chave_mes = '{}-{}'.format(ano, mes)
+            #inserindo cada item pertencente ao seu mês no local da chave
             if chave_mes in dicionario:
                 dicionario[chave_mes].append(linha)
             else:
                 dicionario[chave_mes] = []
                 dicionario[chave_mes].append(linha)
     ficheiro.close()
-    lista_ordenada = sorted(dicionario.keys())
+    #ordenando um novo dicionário onde colocaremos os pagamentos máximos
+     #procurando máximos
     for i in sorted(dicionario.keys()):
        maximo = dicionario[i][0].copy()
        for j in range(1,len(dicionario[i])):
+           #cada chave armazena uma lista de linhas i onde a posicao j e a linha atual
+           # a posicao 3 da posicao j representa o valor de pagamento
            if float(maximo[3]) <= float(dicionario[i][j][3]):
                maximo = dicionario[i][j].copy()
        fornecedores_pagamento_maximo[i] = maximo

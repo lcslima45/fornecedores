@@ -44,6 +44,6 @@ html = """<html><head><meta charset='utf-8'>
    """.format(tabela)
 file.write(html)
 file.close()
-print('FIM')
+print('Olhe sua pasta raiz, o seu arquivo já está pronto :L ')
 
   
